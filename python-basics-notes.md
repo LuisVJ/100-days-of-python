@@ -1,0 +1,220 @@
+# Basics
+
+## Print function
+
+```python
+print("Hello world")
+```
+
+* \n -> character for newline
+
+```python
+# concatenation:
+print("Hello" + "world")
+```
+
+We can write comments with #
+
+## input fuction
+
+Prints a message to the console and waits for input.  
+It will return the input and we can store it in a variable.
+
+```python
+name = input("What is your name? ")
+print(name)
+```
+
+## len()
+
+To show the length of a string we use the len function:
+
+```python
+print(len("Hello")) # 5
+```
+
+## Numbers
+
+we can use "_" to separate thousands in numbers instead of commas or dots:
+123_345_742
+
+```python
+print(231_241_124 + 233_325)
+```
+
+## Type conversion
+
+```python
+type(variable) # will tell us the data type of the variable
+str(variable) # converts the data stored in variable into a string
+float(variable) # converts into a float
+int(variable) # converts into integer
+```
+
+## Number manipulation
+
+```python
+round(2.53535, 2) # rounds the number with 2 decimals
+print(8//3) # floor division, returns integer 2 in this case.
+```
+
+## f-strings
+
+```python
+print(f"this is a formated string with a {variable}")
+```
+
+## Control Flow and Logical Operators
+
+if/else satements:
+
+```python
+if condition:
+    # Do this
+elif condition 2:
+    # Do this
+else:
+    # Do this instead
+```
+
+We can nest an if statements inside another if statement.  
+we can also use the elif statement to check for several conditions.
+
+comparison operators:
+
+* ">"   -> greater than
+* "<"   -> less than
+* ">="  -> greater or equal
+* "<="  -> less than or equal
+* "=="  -> equal to
+* "!="  -> not equal to
+
+Logical operators:
+
+* AND
+* OR
+* NOT
+
+## Random module
+
+---
+
+We can create our own modules in separate files and then import tem with the keyword import
+
+```python
+# We need to import the module to be able to use it
+import random
+
+#create a random integer between start and end
+a = random.randint(start, end)
+# create a random floating point between 0 and 1(excluded)
+f = random.random()
+```
+
+check [documentation](https://www.askpython.com/python-modules/python-random-module-generate-random-numbers-sequences) for more functions
+
+## Lists
+
+---
+
+```python
+# declare a list
+fruits = ["apple", "orange", "banana"]
+```
+
+Lists are ordered  
+we can use negative indexes to acces the values:  
+
+* fruits[-1] will return banana
+
+```python
+# add items to the list
+fruits.append("pear")
+```
+
+More methods in the [Documentation](https://docs.python.org/3/tutorial/datastructures.html)
+
+## Loops
+
+---
+
+* For Loop
+
+```python
+for item in items:
+    # Code
+
+# We can use the range() function to iterate
+for i in range(a, b)
+    # code
+```
+
+The range won't include b. We can also specify the step as a third parameter
+
+* While loop
+
+```python
+while condition:
+    # code
+```
+
+## Fuctions
+
+---
+
+```python
+# Declaring a function
+def my_function():
+    #code
+
+# Calling the function
+my_function():
+```
+
+* Keyword arguments:
+
+```python
+def my_function(name, location):
+    #code
+
+# Calling the function with keyword arguments:
+my_function(location="here", name="pepe")
+```
+
+In this case the order of the arguments doesn't matter because we are using the specific names of the arguments.
+
+### Docstrings
+
+we can add documentation to our functions:
+
+```python
+def my_function():
+    """ Documentation of our function explaning what it does, how ...."""
+
+    # code
+```
+
+## Dictionaries
+
+---
+
+ ```python
+my_dictionary = {
+    "key1" = "value1",
+    "key2" = "value2",
+}
+# To retrieve the information:
+print(my_dictionary["key2"])
+
+# To add new key value pairs. Also to redefine values of existing keys:
+
+my_dictionary["newKey"] = "newValue"
+ ```
+
+Looping throug dictionaries:
+
+```python
+for a in my_dictionary:
+    # a is the keys of the dictionary
+    my_dictionary[a] # the value of said key
+```
