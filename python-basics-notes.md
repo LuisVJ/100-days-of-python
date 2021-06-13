@@ -218,3 +218,37 @@ for a in my_dictionary:
     # a is the keys of the dictionary
     my_dictionary[a] # the value of said key
 ```
+
+## Managing Files
+
+---
+
+```python
+# Open a file to a variable
+file = open("my_file.txt")
+# reading the file
+contents = file.read()
+# close the file
+file.close() # to save resources
+```
+
+A diferent way to open a file:
+
+```python
+with open("my_file.txt") as file:
+    contents = file.read()
+    print(contents)
+# It will close the file atomatically
+```
+
+We can open the file in diferent modes:
+
+```python
+# Opening in write mode
+with open("my_file.txt", mode="w") as file:
+    file.write("New text.") 
+    # This will overwrite the contents
+    mode="a"
+    # this mode will add the new text to the existing content
+
+```
