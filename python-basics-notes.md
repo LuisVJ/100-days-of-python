@@ -252,3 +252,13 @@ with open("my_file.txt", mode="w") as file:
     # this mode will add the new text to the existing content
 
 ```
+
+## Pandas
+
+---
+
+```python
+import pandas
+
+data = pandas.read_csv("filename") 
+```
