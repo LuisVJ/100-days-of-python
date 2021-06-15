@@ -261,4 +261,34 @@ with open("my_file.txt", mode="w") as file:
 import pandas
 
 data = pandas.read_csv("filename") 
+
+# loop through rows of a data frame
+for (index, row) in data_frame.iterrows():
+    print(row.column_name)
+```
+
+## List comprehension
+
+---
+
+```python
+list = [1, 2 ,3]
+new_list = [new_item for item in list if condition]
+# The condition is optional
+```
+
+We can also use comprehension with dictionaries
+
+```python
+new_dict = {new_key:new_value for item in list}
+
+new_dict = {new_key:new_value for (key,value) in dict.items()}
+# we can also have conditions
+# example:
+
+names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor"]
+
+students_scores = {student:random.randint(1,100) for student in names}
+passed_students = {student:score for (student, score) in students_scores if score >= 60}
+
 ```
