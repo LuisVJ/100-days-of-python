@@ -1,5 +1,4 @@
 import tkinter as tk
-from typing import Text
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
