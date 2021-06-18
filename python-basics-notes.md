@@ -292,3 +292,48 @@ students_scores = {student:random.randint(1,100) for student in names}
 passed_students = {student:score for (student, score) in students_scores if score >= 60}
 
 ```
+
+## Errors and exceptions
+
+---
+
+* try: something that might cause an exception.
+* except: Do this if there was an exception.
+* else: Do this if there were no exceptions.
+* finally: Do this no matter what happens.
+
+```python
+try:
+    file = open("my_file.txt")
+except FileNotFoundError: # It's best practice to specify the type of error we are trying to catch
+    print("There was an error, file not found")
+    # We could create a new file to handle this error
+    file = open("my_file.txt", "w")
+except KeyError as error_message:
+    # Handle this type of error, but not the previous one
+    print(f"The key {error_message} doesn't exist")
+else:
+    # It will execute if the there is no exceptions
+    content = file.read()
+    print(content)
+finally:
+    # It will always execute. Is not often used
+    file.close()
+    print("File closed")
+```
+
+* raise: it allows us to raise our own exceptions
+
+```python
+raise TypeError("This is an error that I made up")
+############## Example #############
+
+height = float(input("Height: "))
+weight = int(input("weight: "))
+
+if height > 3:
+    raise ValueError("Human height should not be over 3 metters.")
+
+bmi = weight / height ** 2
+print(bmi)
+```
