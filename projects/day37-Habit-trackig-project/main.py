@@ -1,6 +1,6 @@
 import requests
 from dotenv import load_dotenv
-from os import getenv, read
+from os import getenv
 import datetime
 
 from requests.models import Response
