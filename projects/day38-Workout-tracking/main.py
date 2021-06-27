@@ -46,8 +46,7 @@ time = current_time.strftime("%H:%M:%S")
 ################ Post data into the sheet with sheety API ###################
 
 sheet_headers = {
-    "Authorization",
-    "Bearer " + SHEETY_TOKEN
+    "Authorization": "Bearer " + SHEETY_TOKEN
 }
 for exercise in data:
     row = {
